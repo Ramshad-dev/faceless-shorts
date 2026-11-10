@@ -326,67 +326,72 @@ for i, cy in enumerate([680, 780, 880]):
 font_mono = 'styles/night-file/example/fonts/FreeMonoBold.ttf'.replace('\\', '/')
 font_sans = 'styles/night-file/example/fonts/Inter-Black.otf'.replace('\\', '/')
 
+def dt(font, text, size, color, x, y):
+    # Escape special characters for ffmpeg drawtext filter
+    safe_text = text.replace('\\', '\\\\').replace(':', '\\:').replace("'", "\\'").replace('%', '\\\\\\%')
+    return f"drawtext=fontfile='{font}':text='{safe_text}':fontsize={size}:fontcolor='{color}':x={x}:y={y}"
+
 # Build drawtext filters
 vf_filters = [
     # Main Header
-    f"drawtext=fontfile='{font_sans}':text='PS1 LIMINAL 3D\\: VIDEO STYLE SHEET':fontsize=36:fontcolor='#F2F4F8':x=24:y=48",
-    f"drawtext=fontfile='{font_mono}':text='RETRO HORROR · DREAMCORE · CHOOSE 4 PLANETS // 2026':fontsize=18:fontcolor='#9BA3B5':x={W}-620:y=46",
+    dt(font_sans, "PS1 LIMINAL 3D: VIDEO STYLE SHEET", 36, "#F2F4F8", 24, 48),
+    dt(font_mono, "RETRO HORROR · DREAMCORE · CHOOSE 4 PLANETS // 2026", 18, "#9BA3B5", W - 620, 46),
 
     # Panel 1: Hero Frame Callouts
-    f"drawtext=fontfile='{font_sans}':text='1. HERO FRAME':fontsize=22:fontcolor='#FFD54F':x=36:y=112",
-    f"drawtext=fontfile='{font_mono}':text='PS1 HARDWARE VERTEX JITTER':fontsize=16:fontcolor='#E0E6ED':x=290:y=180",
-    f"drawtext=fontfile='{font_mono}':text='DENSE DISTANCE FOG (SILENT HILL)':fontsize=16:fontcolor='#E0E6ED':x=290:y=240",
-    f"drawtext=fontfile='{font_mono}':text='RETRO CRT SCANLINES & DITHER':fontsize=16:fontcolor='#E0E6ED':x=290:y=300",
-    f"drawtext=fontfile='{font_mono}':text='CLINICAL / UNCANNY VOICE TONE':fontsize=16:fontcolor='#E0E6ED':x=290:y=360",
-    f"drawtext=fontfile='{font_mono}':text='MONOSPACE DIALOGUE BOX HUD':fontsize=16:fontcolor='#E0E6ED':x=290:y=420",
-    f"drawtext=fontfile='{font_mono}':text='SYSTEM RECORD // LEVEL 04':fontsize=13:fontcolor='#E74C3C':x=50:y=155",
-    f"drawtext=fontfile='{font_mono}':text='EARTH IS GONE.':fontsize=14:fontcolor='#FFFFFF':x=50:y=500",
-    f"drawtext=fontfile='{font_mono}':text='CHOOSE *ONE OF *4 PLANETS':fontsize=14:fontcolor='#E74C3C':x=50:y=525",
+    dt(font_sans, "1. HERO FRAME", 22, "#FFD54F", 36, 112),
+    dt(font_mono, "PS1 HARDWARE VERTEX JITTER", 16, "#E0E6ED", 290, 180),
+    dt(font_mono, "DENSE DISTANCE FOG (SILENT HILL)", 16, "#E0E6ED", 290, 240),
+    dt(font_mono, "RETRO CRT SCANLINES & DITHER", 16, "#E0E6ED", 290, 300),
+    dt(font_mono, "CLINICAL / UNCANNY VOICE TONE", 16, "#E0E6ED", 290, 360),
+    dt(font_mono, "MONOSPACE DIALOGUE BOX HUD", 16, "#E0E6ED", 290, 420),
+    dt(font_mono, "SYSTEM RECORD // LEVEL 04", 13, "#E74C3C", 50, 155),
+    dt(font_mono, "EARTH IS GONE.", 14, "#FFFFFF", 50, 500),
+    dt(font_mono, "CHOOSE *ONE OF *4 PLANETS", 14, "#E74C3C", 50, 525),
 
     # Panel 2: Palette Swatch Labels
-    f"drawtext=fontfile='{font_sans}':text='2. PALETTE & WORLDS':fontsize=22:fontcolor='#FFD54F':x=606:y=112",
-    f"drawtext=fontfile='{font_mono}':text='FOG':fontsize=12:fontcolor='#CAD2C5':x=628:y=215",
-    f"drawtext=fontfile='{font_mono}':text='RUST':fontsize=12:fontcolor='#CAD2C5':x=706:y=215",
-    f"drawtext=fontfile='{font_mono}':text='AMBER':fontsize=12:fontcolor='#CAD2C5':x=780:y=215",
-    f"drawtext=fontfile='{font_mono}':text='CYAN':fontsize=12:fontcolor='#CAD2C5':x=862:y=215",
-    f"drawtext=fontfile='{font_mono}':text='PASTEL':fontsize=12:fontcolor='#CAD2C5':x=936:y=215",
-    f"drawtext=fontfile='{font_mono}':text='VOID':fontsize=12:fontcolor='#CAD2C5':x=1020:y=215",
-    f"drawtext=fontfile='{font_mono}':text='ALERT':fontsize=12:fontcolor='#CAD2C5':x=1094:y=215",
-    f"drawtext=fontfile='{font_mono}':text='PHOSPHOR':fontsize=12:fontcolor='#CAD2C5':x=1160:y=215",
-    f"drawtext=fontfile='{font_mono}':text='(01) EDEN':fontsize=15:fontcolor='#D2B4DE':x=650:y=515",
-    f"drawtext=fontfile='{font_mono}':text='(02) FACILITY':fontsize=15:fontcolor='#F9E79F':x=790:y=515",
-    f"drawtext=fontfile='{font_mono}':text='(03) SILENT RUST':fontsize=15:fontcolor='#E59866':x=940:y=515",
-    f"drawtext=fontfile='{font_mono}':text='(04) VOID GLITCH':fontsize=15:fontcolor='#E74C3C':x=1090:y=515",
+    dt(font_sans, "2. PALETTE & WORLDS", 22, "#FFD54F", 606, 112),
+    dt(font_mono, "FOG", 12, "#CAD2C5", 628, 215),
+    dt(font_mono, "RUST", 12, "#CAD2C5", 706, 215),
+    dt(font_mono, "AMBER", 12, "#CAD2C5", 780, 215),
+    dt(font_mono, "CYAN", 12, "#CAD2C5", 862, 215),
+    dt(font_mono, "PASTEL", 12, "#CAD2C5", 936, 215),
+    dt(font_mono, "VOID", 12, "#CAD2C5", 1020, 215),
+    dt(font_mono, "ALERT", 12, "#CAD2C5", 1094, 215),
+    dt(font_mono, "PHOSPHOR", 12, "#CAD2C5", 1160, 215),
+    dt(font_mono, "(01) EDEN", 15, "#D2B4DE", 650, 515),
+    dt(font_mono, "(02) FACILITY", 15, "#F9E79F", 790, 515),
+    dt(font_mono, "(03) SILENT RUST", 15, "#E59866", 940, 515),
+    dt(font_mono, "(04) VOID GLITCH", 15, "#E74C3C", 1090, 515),
 
     # Panel 3: Retro PS1 Inserts & HUD
-    f"drawtext=fontfile='{font_sans}':text='3. RETRO PS1 INSERTS & HUD':fontsize=22:fontcolor='#FFD54F':x=1276:y=112",
-    f"drawtext=fontfile='{font_mono}':text='PS1 MEMORY CARD // BLOCK 04 CORRUPT':fontsize=13:fontcolor='#CAD2C5':x=1285:y=330",
-    f"drawtext=fontfile='{font_mono}':text='EMERGENCY BROADCAST TAPE CASSETTE':fontsize=13:fontcolor='#CAD2C5':x=1595:y=330",
-    f"drawtext=fontfile='{font_mono}':text='CRT RADAR HUD // SCANNING 4 REALMS':fontsize=13:fontcolor='#CAD2C5':x=1285:y=555",
-    f"drawtext=fontfile='{font_mono}':text='55Hz SUB-DRONE // TAPE WARBLE FX':fontsize=13:fontcolor='#CAD2C5':x=1595:y=555",
+    dt(font_sans, "3. RETRO PS1 INSERTS & HUD", 22, "#FFD54F", 1276, 112),
+    dt(font_mono, "PS1 MEMORY CARD // BLOCK 04 CORRUPT", 13, "#CAD2C5", 1285, 330),
+    dt(font_mono, "EMERGENCY BROADCAST TAPE CASSETTE", 13, "#CAD2C5", 1595, 330),
+    dt(font_mono, "CRT RADAR HUD // SCANNING 4 REALMS", 13, "#CAD2C5", 1285, 555),
+    dt(font_mono, "55Hz SUB-DRONE // TAPE WARBLE FX", 13, "#CAD2C5", 1595, 555),
 
     # Panel 4: Realms Labels
-    f"drawtext=fontfile='{font_sans}':text='4. THE 4 PLANET REALMS':fontsize=22:fontcolor='#FFD54F':x=36:y=642",
-    f"drawtext=fontfile='{font_mono}':text='(A) THE FALSE HAVEN':fontsize=14:fontcolor='#CAD2C5':x=60:y=1042",
-    f"drawtext=fontfile='{font_mono}':text='(B) ENDLESS MALL':fontsize=14:fontcolor='#CAD2C5':x=315:y=1042",
-    f"drawtext=fontfile='{font_mono}':text='(C) SILENT HILL RUST':fontsize=14:fontcolor='#CAD2C5':x=545:y=1042",
+    dt(font_sans, "4. THE 4 PLANET REALMS", 22, "#FFD54F", 36, 642),
+    dt(font_mono, "(A) THE FALSE HAVEN", 14, "#CAD2C5", 60, 1042),
+    dt(font_mono, "(B) ENDLESS MALL", 14, "#CAD2C5", 315, 1042),
+    dt(font_mono, "(C) SILENT HILL RUST", 14, "#CAD2C5", 545, 1042),
 
     # Panel 5: Captions & Dialogue Text
-    f"drawtext=fontfile='{font_sans}':text='5. CAPTIONS & DIALOGUE':fontsize=22:fontcolor='#FFD54F':x=806:y=642",
-    f"drawtext=fontfile='{font_mono}':text='[ EARTH IS *GONE | CHOOSE *ONE ]':fontsize=16:fontcolor='#CAD2C5':x=830:y=715",
-    f"drawtext=fontfile='{font_mono}':text='[ THE SIREN SOUNDS AT *MIDNIGHT ]':fontsize=16:fontcolor='#CAD2C5':x=830:y=815",
-    f"drawtext=fontfile='{font_mono}':text='[ FORGET YOUR *NAME | COMMENT *BELOW ]':fontsize=16:fontcolor='#CAD2C5':x=830:y=915",
-    f"drawtext=fontfile='{font_sans}':text='TIMING: 0.5s GAP · SPEED: 0.93x · VOICE: AM_ONYX':fontsize=14:fontcolor='#90A4AE':x=820:y=985",
+    dt(font_sans, "5. CAPTIONS & DIALOGUE", 22, "#FFD54F", 806, 642),
+    dt(font_mono, "[ EARTH IS *GONE | CHOOSE *ONE ]", 16, "#CAD2C5", 830, 715),
+    dt(font_mono, "[ THE SIREN SOUNDS AT *MIDNIGHT ]", 16, "#CAD2C5", 830, 815),
+    dt(font_mono, "[ FORGET YOUR *NAME | COMMENT *BELOW ]", 16, "#CAD2C5", 830, 915),
+    dt(font_sans, "TIMING: 0.5s GAP · SPEED: 0.93x · VOICE: AM_ONYX", 14, "#90A4AE", 820, 985),
 
     # Panel 6: Core Rules
-    f"drawtext=fontfile='{font_sans}':text='6. CORE RULES':fontsize=22:fontcolor='#FFD54F':x=1336:y=642",
-    f"drawtext=fontfile='{font_sans}':text='1. LOW-POLY PS1 3D: AFFINE JITTER & SCANLINES.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=690",
-    f"drawtext=fontfile='{font_sans}':text='2. DISTANCE FOG: HEAVY MIST CLIPS AT 15 UNITS.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=735",
-    f"drawtext=fontfile='{font_sans}':text='3. UNCANNY DREAD: ISOLATION & RULES, NO JUMPSCARES.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=780",
-    f"drawtext=fontfile='{font_sans}':text='4. VOICE: CALM, LOW REGISTER (AM_ONYX), 0.5S GAPS.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=825",
-    f"drawtext=fontfile='{font_sans}':text='5. DUCKING: TAPE WARBLE / DRONES DUCK -55% UNDER VOICE.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=870",
-    f"drawtext=fontfile='{font_sans}':text='6. SCRIPT SHAPE: HOOK -> 4 CHOICES WITH CATCHES -> LOOP.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=915",
-    f"drawtext=fontfile='{font_sans}':text='7. FORMAT: 9:16 VERTICAL, 35-45S, SEAMLESS LOOP LAST LINE.':fontsize=14:fontcolor='#ECEFF1':x=1345:y=960"
+    dt(font_sans, "6. CORE RULES", 22, "#FFD54F", 1336, 642),
+    dt(font_sans, "1. LOW-POLY PS1 3D: AFFINE JITTER & SCANLINES.", 14, "#ECEFF1", 1345, 690),
+    dt(font_sans, "2. DISTANCE FOG: HEAVY MIST CLIPS AT 15 UNITS.", 14, "#ECEFF1", 1345, 735),
+    dt(font_sans, "3. UNCANNY DREAD: ISOLATION & RULES, NO JUMPSCARES.", 14, "#ECEFF1", 1345, 780),
+    dt(font_sans, "4. VOICE: CALM, LOW REGISTER (AM_ONYX), 0.5S GAPS.", 14, "#ECEFF1", 1345, 825),
+    dt(font_sans, "5. DUCKING: TAPE WARBLE / DRONES DUCK -55% UNDER VOICE.", 14, "#ECEFF1", 1345, 870),
+    dt(font_sans, "6. SCRIPT SHAPE: HOOK -> 4 CHOICES WITH CATCHES -> LOOP.", 14, "#ECEFF1", 1345, 915),
+    dt(font_sans, "7. FORMAT: 9:16 VERTICAL, 35-45S, SEAMLESS LOOP LAST LINE.", 14, "#ECEFF1", 1345, 960)
 ]
 
 out_png = 'styles/ps1-liminal/style-sheet.png'
@@ -398,9 +403,9 @@ cmd = [
 ]
 
 print(f"Rendering {out_png} ({W}x{H})...")
-res = subprocess.run(cmd, input=pix, capture_output=True, text=True)
+res = subprocess.run(cmd, input=bytes(pix), capture_output=True)
 if res.returncode != 0:
-    print("FFmpeg error:", res.stderr)
+    print("FFmpeg error:", res.stderr.decode('utf-8', errors='ignore'))
     sys.exit(res.returncode)
 else:
     size_kb = os.path.getsize(out_png) / 1024
