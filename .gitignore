@@ -1,0 +1,23 @@
+# Generated assets for faceless-shorts
+# Short project generated data and review frames
+shorts/**/data/
+shorts/**/review/
+
+# Rendered output videos
+output_videos/
+
+# Temporary Chrome profile used by capture scripts
+.tmp_chrome_profile/
+
+# Generated audio mixes (wav files) – keep source MP3s
+*.wav
+
+# Node.js dependencies (if present)
+node_modules/
+
+# OS metadata files
+Thumbs.db
+.DS_Store
+
+# Log files
+*.log
