@@ -6,6 +6,9 @@ shorts/**/review/
 # Rendered output videos
 output_videos/
 
+
+input_music/
+
 # Temporary Chrome profile used by capture scripts
 .tmp_chrome_profile/
 
