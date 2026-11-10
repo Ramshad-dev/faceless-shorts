@@ -9,7 +9,7 @@ Say **"just go"** to accept every default in one shot.
 
 ```
 Make a <style> short about: <topic>
-Style:        <deep-dive | night-file | inside-out | stick-story | paper-atlas | tall-tale | motion/<look-id>>
+Style:        <deep-dive | night-file | ps1-liminal | inside-out | stick-story | paper-atlas | tall-tale | motion/<look-id>>
 Length:       <~30 s>                      (default 30 s; range 12-60 s)
 Voice:        <am_michael>                 (default am_michael; `voice.py --list` for all)
 Voiceover:    <AI voice | my recording | captions-only>   (default AI voice)
@@ -23,6 +23,7 @@ Ideas:        <you pick 3 ideas>           (use instead of a topic)
 
 ```
 Make a Deep Dive 3D short: what happens if you crack your knuckles?
+Make a PS1 Liminal short: Choose 4 planets you must live on forever.
 Make a Night File 3D short about D.B. Cooper.
 Make a Paper Atlas short: how the Great Fire of London started.
 Make a motion look whiteboard short explaining how DNS works.
@@ -47,6 +48,7 @@ You pick 3 ideas for a Stick Story short, then build my favourite.
 |---|---|---|---|---|
 | `deep-dive` | **Deep Dive 3D** | The flagship, Zack D. Films-like: sculpted 3D people in sunlit sets, glowing x-ray bodies, camera journeys through blood vessels, shallow focus. "What happens if…?" body and science. | 30-45 s | 9:16 |
 | `night-file` | **Night File 3D** | Unsolved mysteries / true crime: dark 3D places with one light, faceless people (the subject glows red), typewriter dates, case-file inserts. | 30-45 s | 9:16 |
+| `ps1-liminal` | **PS1 Liminal 3D** | Low-poly retro 3D horror & dreamcore: Silent Hill distance fog, affine jitter, scanlines. "Choose 4 planets you must live on", liminal elevators, backrooms. | 30-45 s | 9:16 |
 | `inside-out` | **Inside Out** | Flat 2D "What happens if…?" explainer: a simple hero, x-ray cutaways, bold 1-3 word captions, punchy cuts. Lighter and faster than Deep Dive. | 25-40 s | 9:16 |
 | `stick-story` | **Stick Story** | "What would you do if…?" survival steps: stick people with acting eyes, flat rooms day/night, gold step cards. | 30-45 s | 9:16 |
 | `paper-atlas` | **Paper Atlas** | History in cut paper: parchment maps, crimson routes, gold date ribbons, period figures. | 30-45 s | 9:16 |
@@ -56,6 +58,7 @@ You pick 3 ideas for a Stick Story short, then build my favourite.
 
 - Body / health / science "what happens if" → **Deep Dive 3D** (or **Inside Out** for a lighter, faster 2D look)
 - Creepy, unexplained, true crime, "this happened in 1971" → **Night File 3D**
+- Liminal spaces, dreamcore, Silent Hill retro horror, "choose 4 planets / realms you must live on" → **PS1 Liminal 3D**
 - Survival, life hacks, "here's what you do" → **Stick Story**
 - A historical event, "how X happened" → **Paper Atlas**
 - A funny or clever true story, a con, a loophole, "this guy did X" → **Tall Tale 3D**

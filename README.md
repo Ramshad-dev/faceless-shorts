@@ -6,10 +6,11 @@ word-synced captions, animation, sound effects and music, rendered to MP4. No AI
 **Styles** (each has a style sheet, a style guide and a finished example video project)
 1. **Deep Dive 3D** (flagship): Zack D. Films-like 3D "What happens if…?" explainers. Example: *What happens if you hold your breath?*
 2. **Night File 3D**: unsolved mysteries and true crime in dark 3D rooms. Example: *The man who jumped out of a plane* (D.B. Cooper).
-3. **Inside Out**: flat 2D x-ray explainers. Example: *What if you swallow gum?*
-4. **Stick Story**: stick-figure survival steps. Example: *What if the power went out for 3 days?*
-5. **Paper Atlas**: history in cut paper and maps. Example: *How one bakery burned down London*.
-6. **Tall Tale 3D**: funny true stories, flat 2D cartoon people in a sunny 3D world. Example: *The girl who was mailed to grandma*.
+3. **PS1 Liminal 3D**: retro low-poly psychological horror & dreamcore: Silent Hill distance fog, affine jitter, scanlines. Example: *Choose 4 planets: you must live here*.
+4. **Inside Out**: flat 2D x-ray explainers. Example: *What if you swallow gum?*
+5. **Stick Story**: stick-figure survival steps. Example: *What if the power went out for 3 days?*
+6. **Paper Atlas**: history in cut paper and maps. Example: *How one bakery burned down London*.
+7. **Tall Tale 3D**: funny true stories, flat 2D cartoon people in a sunny 3D world. Example: *The girl who was mailed to grandma*.
 
 **Plus 74 motion looks** (`motion/`): scene-based animated explainers from one shared engine - whiteboard, chalkboard,
 watercolor, stained glass, claymation, manga, ukiyo-e, CRT terminal, Game Boy, synthwave, isometric, voxel, film noir,
