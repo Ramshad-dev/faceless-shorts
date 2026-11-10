@@ -1,0 +1,4 @@
+{
+  "typescript.tsdk": "motion/engine/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
