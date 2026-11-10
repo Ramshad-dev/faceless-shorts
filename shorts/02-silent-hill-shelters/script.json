@@ -1,0 +1,57 @@
+{
+  "title": "The 4 Shelters of Silent Hill",
+  "style": "ps1-liminal",
+  "voice": "am_onyx",
+  "speed": 0.93,
+  "lead": 0.6,
+  "outro": 1.2,
+  "gap": 0.45,
+  "music": "../../input_music/TEMPOREX - Numbers (Instrumental  Perfect intro loop) - an.mp3",
+  "sources": [
+    "Silent Hill 1999 environment design",
+    "Analog emergency broadcast archives"
+  ],
+  "lines": [
+    {
+      "text": "The siren just started its four-minute cycle, and the fog is crawling beneath your door.",
+      "caps": "AIR RAID *SIREN | FOG UNDER *DOOR"
+    },
+    {
+      "text": "You have thirty seconds to run into one of four emergency shelters.",
+      "caps": "THIRTY *SECONDS | RUN INTO *ONE SHELTER"
+    },
+    {
+      "text": "Shelter one is an abandoned subway terminal with heavy steel gates.",
+      "caps": "SHELTER *ONE | SUBWAY *TERMINAL | STEEL *GATES"
+    },
+    {
+      "text": "The gate locks from inside, but footsteps keep pacing on the dark rails right below.",
+      "caps": "GATES *LOCK | FOOTSTEPS ON *TRACKS"
+    },
+    {
+      "text": "Shelter two is an empty hotel room on the fifth floor.",
+      "caps": "SHELTER *TWO | EMPTY *HOTEL | FIFTH *FLOOR"
+    },
+    {
+      "text": "The television only displays static, and the bathroom mirror reflects a room that is not yours.",
+      "caps": "WHITE *STATIC | CORRUPTED *MIRROR"
+    },
+    {
+      "text": "Shelter three is an underground boiler bunker with heavy steam pipes.",
+      "caps": "SHELTER *THREE | BOILER *BUNKER | STEAM *PIPES"
+    },
+    {
+      "text": "Nothing can break in, but the room temperature climbs by five degrees every ten minutes.",
+      "caps": "NOTHING GETS *IN | HEAT IS *RISING"
+    },
+    {
+      "text": "Shelter four is a boarded roadside diner with a rotary phone on the counter.",
+      "caps": "SHELTER *FOUR | BOARDED *DINER | ROTARY *PHONE"
+    },
+    {
+      "text": "The phone rings once every hour, whispering your childhood secrets. Which door do you lock?",
+      "caps": "PHONE *RINGS | WHICH DOOR DO YOU *LOCK?",
+      "gap": 0.6
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+ "duration": 61.191,
+ "cues": [
+  {
+   "t": 0.3,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 0.8,
+   "type": "tock",
+   "gain": 0.4
+  },
+  {
+   "t": 7.119,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 11.398,
+   "type": "slide",
+   "gain": 0.4,
+   "dur": 0.5
+  },
+  {
+   "t": 19.037,
+   "type": "tock",
+   "gain": 0.5
+  },
+  {
+   "t": 24.077,
+   "type": "slam",
+   "gain": 0.6
+  },
+  {
+   "t": 31.176,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 35.835,
+   "type": "alarm",
+   "gain": 0.6,
+   "dur": 2.0
+  },
+  {
+   "t": 42.174,
+   "type": "whoosh",
+   "gain": 0.5
+  },
+  {
+   "t": 46.453,
+   "type": "tock",
+   "gain": 0.5
+  },
+  {
+   "t": 53.712,
+   "type": "thud",
+   "gain": 0.5
+  }
+ ]
+}
