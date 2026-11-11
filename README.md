@@ -119,9 +119,18 @@ You pick 3 ideas for a Tall Tale 3D short, then build my favourite.
 Full prompt format, all style ids and all 74 motion looks: `prompt-format.md`
 (list them live: `bash scripts/new_video.sh --list`).
 
+
 **Layout:** `SKILL.md` (what the agent follows) · `scripts/` (setup, selftest, new_video, voice, words, estimate) ·
 `styles/<style>/` (`style-sheet.png`, `STYLE.md`, `example/` = a complete project that renders as-is) ·
 `motion/` (74 explainer looks + engine + scene templates; see `motion/MOTION.md`).
+
+## Results
+
+<img width="2196" height="3876" alt="all" src="https://github.com/user-attachments/assets/3cd80ce9-521c-45c5-a489-b78ced342320" />
+Knuckles
+
+<img width="2196" height="3100" alt="all" src="https://github.com/user-attachments/assets/28d274d4-4eef-4fb7-88e9-79c33ced2e8f" />
+Headless Chicken
 
 **Licenses:** the code, stories, drawings and sound are original and free to use in your videos. Inter font: SIL Open Font
 License 1.1. Installed on first use: Kokoro-82M (Apache-2.0) via kokoro-onnx (MIT), faster-whisper + Whisper small.en (MIT),
