@@ -84,7 +84,7 @@ bash ~/.config/opencode/skills/faceless-shorts/scripts/selftest.sh
 PowerShell, where plain `bash` resolves to a WSL stub — invoke Git Bash explicitly:
 `& "C:\Program Files\Git\bin\bash.exe" "$env:USERPROFILE\.config\opencode\skills\faceless-shorts\scripts\setup.sh"`
 
-## Example
+### Example
 
 Start a new opencode session (in any folder) and type:
 
@@ -124,12 +124,12 @@ Full prompt format, all style ids and all 74 motion looks: `prompt-format.md`
 `styles/<style>/` (`style-sheet.png`, `STYLE.md`, `example/` = a complete project that renders as-is) ·
 `motion/` (74 explainer looks + engine + scene templates; see `motion/MOTION.md`).
 
-## Results
-#Knuckles
+### Results
+##Knuckles
 <img width="2196" height="3876" alt="all" src="https://github.com/user-attachments/assets/3cd80ce9-521c-45c5-a489-b78ced342320" />
 
 
-#Headless Chicken
+##Headless Chicken
 <img width="2196" height="3100" alt="all" src="https://github.com/user-attachments/assets/28d274d4-4eef-4fb7-88e9-79c33ced2e8f" />
 
 **Licenses:** the code, stories, drawings and sound are original and free to use in your videos. Inter font: SIL Open Font
